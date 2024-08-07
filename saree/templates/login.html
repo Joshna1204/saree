@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<h2 class="text-center" style="margin-bottom:50px;">Login</h2>
+<center>
+<!--    <div class="card mb-4" style="width:450px;background-color:#FCE4EC;">-->
+<form method="POST">
+     {% csrf_token %}
+    <div class="form-floating mb-4 col-sm-5">
+        <input type="text" class="form-control" name="u" placeholder="Enter the UserName">
+        <label>UserName</label>
+    </div>
+
+    <div class="form-floating col-sm-5 mb-4">
+  <input type="password" class="form-control"  name="p" placeholder="Enter the Password">
+  <label>Password</label>
+    </div>
+
+     <div class="mb-3 col-sm-3">
+         <button type="submit" class="form-control btn btn-primary">LOGIN</button>
+</div>
+
+</form>
+    </div>
+</center>
+
+{% endblock %}
